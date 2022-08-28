@@ -20,8 +20,10 @@ export default {
             .then(response => {
                 this.users.id = response.data.id
                 localStorage.setItem('usuarios', JSON.stringify(JSON.parse(localStorage.getItem('usuarios')).concat(this.users))) 
+                router.push({path:`/`})
             }, erro => {
                 console.log(erro)
+                router.push({path:`/`})
             })
         }
     }
