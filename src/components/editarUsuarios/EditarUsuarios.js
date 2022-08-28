@@ -1,3 +1,5 @@
+import router from "@/router/router"
+
 export default {
     name: 'EditarUsuarios',
 
@@ -21,6 +23,7 @@ export default {
             usuarios[indexDoUsuario] = this.novoUsuario
             localStorage.setItem('usuarios', JSON.stringify(usuarios))
             console.log(this.novoUsuario)
+            router.push({path:`/`})
         },
 
         deletarUsuario() {
@@ -28,6 +31,7 @@ export default {
             let indexDoUsuario = JSON.parse(localStorage.getItem('usuarios')).findIndex(user => user.id == this.$route.params.id)
             usuarios.splice(indexDoUsuario, 1)
             localStorage.setItem('usuarios', JSON.stringify(usuarios))
+            router.push({path:`/`})
         }
     }
 }

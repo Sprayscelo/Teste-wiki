@@ -11,11 +11,11 @@
         </div>
         <div v-if="page == 2"  class="listaDeUsuarios neonButton">
             <div class="detalhesDeUsuarios" v-for="user in users.slice(Math.floor(users.length/2), users.length)" :key="user.id">
-            <router-link class="linkUsuario" :to="'/editarUsuarios/' + user.id">
-                <img :src="user.avatar" alt="No Image">
-                <p>{{user.first_name}} {{user.last_name}}</p>
-                <p>{{ user.email }}</p>
-            </router-link>
+                <router-link class="linkUsuario" :to="'/editarUsuarios/' + user.id">
+                    <img :src="user.avatar">
+                    <p>{{user.first_name}} {{user.last_name}}</p>
+                    <p>{{ user.email }}</p>
+                </router-link>
             </div>
         </div>
         <div class="neonButton">
@@ -54,6 +54,9 @@ button:hover {
     text-decoration: inherit;
     color: inherit;
     cursor: pointer;
+    position: relative;
+    height: 100%;
+    pointer-events: all;
 }
 
 .neonButton > div:hover {
@@ -67,6 +70,4 @@ img {
     width: 128px;
     height: 128px;
 }
-
-
 </style>
