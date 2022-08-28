@@ -1,7 +1,6 @@
 <template id="cadastrarUsuarios"> 
     <div id="cadastrarUsuariosContainer">
-        asfsdfsfsfsdfsdfds
-        <form action="">
+        <form @submit="cadastrarUsuarios()" action="">
             <label for="">
                 <span> Primeiro Nome:</span> 
                 <input type="text" name="" id="" v-model="users.first_name" required>
@@ -20,9 +19,9 @@
             </label>
             <label for="">
                 <span>E-mail: </span>
-                <input type="email" v-model="users.email">
+                <input type="email" v-model="users.email" required>
             </label>
-            <input @click="cadastrarUsuarios()" type="submit" value="Cadastrar">
+            <input type="submit" value="Cadastrar">
         </form>
     </div>
 </template>

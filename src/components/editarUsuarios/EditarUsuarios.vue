@@ -7,7 +7,7 @@
             </label>
             <label for="">
                 <span> Primeiro Nome:</span> 
-                <input type="text" name="" id="" v-model="novoUsuario.first_name">
+                <input type="text" name="" id="" v-model="novoUsuario.first_name" required>
             </label>
             <label for="">
                 <span> Segundo Nome:</span> 
